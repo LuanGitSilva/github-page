@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as C from './App.styles';
+import { Header } from './App.styles';
+import { PersonalItems } from './components/PersonalItems';
+import { ProjectsItems } from './components/ProjectsItems';
+import { ClassItems } from './components/ClassItems';
+import { Footer } from './components/Footer';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <C.Container>
+
+      <C.Header>
+        <Header />
+      </C.Header>
+
+      <C.Personal>
+        <PersonalItems />
+      </C.Personal>
+
+      <C.PersonalProjects>
+        <ProjectsItems />
+      </C.PersonalProjects>
+
+      <C.ClassProjects>
+        <ClassItems />
+      </C.ClassProjects>
+
+      <C.Footer>
+        <Footer />
+      </C.Footer>
+    </C.Container>
   );
 }
 
